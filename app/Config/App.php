@@ -24,7 +24,7 @@ class App extends BaseConfig {
             } elseif (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
                 $this->baseURL = 'https://' . $domain;
             } else {
-                $this->baseURL = 'http://' . $domain;
+                $this->baseURL = 'https://' . $domain;
             }
         }
     }
@@ -65,7 +65,7 @@ class App extends BaseConfig {
      * @var string
      */
     public $baseURL = '';
-    
+
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
      * If you want to accept multiple Hostnames, set this.
@@ -79,7 +79,7 @@ class App extends BaseConfig {
      * @phpstan-var list<string>
      */
     public array $allowedHostnames = [];
-    
+
     /**
      * --------------------------------------------------------------------------
      * Index File
@@ -91,8 +91,8 @@ class App extends BaseConfig {
      *
      * @var string
      */
-    
-    public $indexPage = 'index.php';
+
+    public $indexPage = '';
 
     /**
      * --------------------------------------------------------------------------
@@ -259,7 +259,7 @@ class App extends BaseConfig {
     public $CSPEnabled = false;
 
     /* User configs */
-    public $encryption_key = "enter_encryption_key";
+    public $encryption_key = "242eb13ba5eca84";
     public $csrf_protection = true;
     public $temp_file_path = 'files/temp/';
     public $profile_image_path = 'files/profile_images/';
